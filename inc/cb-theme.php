@@ -148,7 +148,7 @@ function cc_gutenberg_register_files()
     // script file
     wp_register_script(
         'cc-block-script',
-        get_stylesheet_directory_uri() .'/js/block-script.js', // adjust the path to the JS file
+        get_stylesheet_directory_uri() .'/js/block-script.js',
         array( 'wp-blocks', 'wp-edit-post' )
     );
     // register block editor script
@@ -156,7 +156,7 @@ function cc_gutenberg_register_files()
         'editor_script' => 'cc-block-script'
     ));
 }
-add_action('init', 'cc_gutenberg_register_files');
+// add_action('init', 'cc_gutenberg_register_files');
 
 function understrap_all_excerpts_get_more_link($post_excerpt)
 {

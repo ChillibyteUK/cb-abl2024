@@ -17,54 +17,11 @@ defined('ABSPATH') || exit;
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/poppins-v20-latin-300.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/poppins-v20-latin-300.woff" as="font" type="font/woff" crossorigin="anonymous">
-    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/poppins-v20-latin-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="<?=get_stylesheet_directory_uri()?>/fonts/poppins-v20-latin-600.woff" as="font" type="font/woff" crossorigin="anonymous">
     <?php
     if (is_front_page()) {
         ?>
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "---",
-  "logo": "---",
-  "url": "https://www.angelabarkerlewis.co.uk/",
-  "telephone": "+441223232054",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "---",
-    "addressLocality": "---",
-    "addressRegion": "---",
-    "postalCode": "---",
-    "addressCountry": "GB"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 000,
-    "longitude": 000
-  } ,
-  "sameAs": [
-    "https://uk.linkedin.com/",
-  ],
-  "contactPoint": [{
-    "@type": "ContactPoint",
-    "telephone": "+44---",
-    "contactType": "enquiries"
-  }],
-  "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "17:30"
-  }]
-}
+
 </script>
         <?php
     }

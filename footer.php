@@ -8,19 +8,19 @@ defined('ABSPATH') || exit;
     <div class="footer container-xl pt-5 pb-3">
         <div class="row">
             <div class="col-lg-3 d-flex align-items-start">
-                <img src="<?=get_stylesheet_directory_uri()?>/img/abl-logo--wo.svg"
+                <img src="<?=get_stylesheet_directory_uri()?>/img/logo.svg"
                     class="footer__logo" alt="Angela Barker-Lewis">
             </div>
             <div class="col-lg-3">
-                <div class="footer__heading">Services</div>
+                <div class="footer__heading">title</div>
                 <?=wp_nav_menu(array('theme_location' => 'footer_menu1'))?>
             </div>
             <div class="col-lg-2">
-                <div class="footer__heading">Sectors</div>
+                <div class="footer__heading">title</div>
                 <?=wp_nav_menu(array('theme_location' => 'footer_menu2'))?>
             </div>
             <div class="col-lg-2">
-                <div class="footer__heading">Watertite</div>
+                <div class="footer__heading">title</div>
                 <?=wp_nav_menu(array('theme_location' => 'footer_menu3'))?>
             </div>
             <div class="col-lg-2">
