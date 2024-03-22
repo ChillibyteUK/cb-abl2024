@@ -6,26 +6,61 @@ $col-grey: #FFF0F0;
 
 :root {
 
+    --hsl-white: 0 0% 99%; // #fcfcfc
+    --hsl-black: 0 0% 6%; // #0f0f0f 
+
+    --hsl-green-soft: 109 14% 60%; // #91A88C
+    --hsl-green-deep: 197 21% 27%; // #364B53
+
+    // actual Tiffany blue
+    // --hsl-green-crisp: 178 90% 39%; // #0abbb5;
+    // --hsl-green-crisp-200: 178 90% 92%; // #e9ecec;
+
+    --hsl-green-crisp: 180 38% 71%; // #98D1D1
+    --hsl-green-crisp-200: 180 10% 92%; // #e9ecec;
+    
+    --col-white: hsl( var(--hsl-white) );
+    --col-black: hsl( var(--hsl-black) );
+
+    --col-green-soft: hsl( var(--hsl-green-soft) );
+    --col-green-deep: hsl( var(--hsl-green-deep) );
+    --col-green-crisp: hsl( var(--hsl-green-crisp) );
+    --col-green-crisp-200: hsl( var(--hsl-green-crisp-200) );
+
     --hsl-grey-200: 207, 24%, 93%;
     --hsl-grey-400: 207, 13%, 48%;
 
     --col-grey-200: hsl( var(--hsl-grey-200) );
     --col-grey-400: hsl( var(--hsl-grey-400) );
 
-    --fw-300: 300;
-    --fw-600: 600;
+    --ff-body: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --ff-heading: 'Lora', 'Times New Roman', Times, serif;
 
-    --fs-200: 0.79rem;
-    --fs-300: 0.889rem;
-    --fs-400: 1rem;
-    --fs-450: clamp(1.00rem, calc(0.91rem + 0.43vw), 1.25rem);
-    --fs-500: clamp(1.13rem, calc(0.97rem + 0.76vw), 1.56rem);
-    --fs-600: clamp(1.27rem, calc(1.03rem + 1.20vw), 1.95rem);
-    --fs-700: clamp(1.42rem, calc(1.07rem + 1.77vw), 2.44rem);
-    --fs-800: clamp(1.80rem, calc(1.10rem + 3.50vw), 3.82rem);
-    --fs-900: clamp(2.03rem, calc(1.07rem + 4.77vw), 4.77rem);
+    --fw-400: 300;
+    --fw-700: 600;
 
-    --h-top: 98px;
+    --fs-200: 0.611rem; /* 11px / 18px */
+    --fs-300: 0.722rem; /* 13px / 18px */
+    --fs-400: 1rem;     /* 18px / 18px, the base */
+    --fs-700: 1.222rem; /* 22px / 18px */
+    --fs-800: clamp(2.24rem, 2.1415rem + 0.5255vw, 2.667rem); /* 48px / 18px */
+    --fs-900: clamp(3rem, 2.9232rem + 0.4098vw, 3.333rem); /* 60px / 18px */
 
-    --hero-height: 400px;
+    --lh-normal: 
+
+    --lh-200: 1.714;
+    --lh-300: 1.5;
+    --lh-400: 1.333;
+    --lh-700: 1.143;
+    --lh-800: 1.267;
+    --lh-900: 1.28;
+
+    --ls-900: 0.08em;
+
+    --h-top-mobile: 75px;
+    --h-top: 100px;
+
+    --hero-height: 600px;
+
+    --transition: 200ms ease-in-out;
 }

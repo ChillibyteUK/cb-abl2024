@@ -1,46 +1,41 @@
 footer {
-    font-size: var(--fs-300);
-    // background-color: var(--col-grey-200);
-    // color: var(--col-grey-400);
-    background-color: var(--col-blue-400);
-    color: white;
+    background-color: var(--col-green-deep);
+    color: var(--col-green-soft);
     a {
         text-decoration: none;
-        color: inherit;
+        color: var(--col-green-soft);
         &:hover {
-            color: var(--col-green-400);
+            color: var(--col-white);
         }
     }
-    p {
-        margin-bottom: 0.25rem;
+
+    .footer__logo {
+        display: block;
+        max-width: 300px;
     }
-    .footer {
-        font-weight: var(--fw-300);
-        border-bottom: 1px solid hsl( var(--hsl-grey-400), 0.8);
-        &__heading {
-            text-transform: uppercase;
-            font-weight: var(--fw-600);
-            margin-bottom: 0.5rem;
-        }
-        a[target=_blank]::after {
-            content: "" !important;
-        }
-        .fa-brands {
-            font-size: 1.6rem;
-        }
-        .menu {
-            padding-inline-start: 0;
-            list-style-type: none;
-        }
-        &__logo {
-            max-width: 200px;
-        }
+    // .footer__heading {
+    //     font-size: var(--fs-300);
+    //     text-transform: uppercase;
+    //     letter-spacing: var(--ls-900);
+    //     padding-bottom: 0.5rem;
+    // }
+    .menu {
+        padding-inline-start: 0;
+    }
+    .menu-item {
+        list-style: none;
+        font-size: var(--fs-300);
+        padding-bottom: 0.5rem;
     }
     .colophon {
         font-size: var(--fs-200);
+        .container-xl {
+            border-top: 1px solid hsl(var(--hsl-green-soft) / .5);
+        }
     }
     .cb {
         content: url(../img/cb.png);
+        filter: grayscale(1);
         transition: opacity 300ms ease;
         &:hover {
             opacity: 0.8;

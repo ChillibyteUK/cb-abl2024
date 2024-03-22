@@ -1,0 +1,64 @@
+.four_cards,
+.three_cards {
+    position: relative;
+    isolation: isolate;
+    &__card {
+        display: grid !important;
+        grid-template-rows: auto 1fr;
+        height: 100%;
+        &:hover {
+            .four_cards__link::after {
+                padding-left: 1.5rem;
+            }
+            .three_cards__link::after {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+
+    &__link {
+        text-transform: uppercase;
+        font-size: var(--fs-200);
+        letter-spacing: var(--ls-900);
+        font-weight: var(--fw-700);
+        &::after {
+            content: "+";
+            padding-left: 0.5rem;
+            transition: padding-left var(--transition);
+        }
+    }
+}
+
+.three_cards {
+    &__image {
+        aspect-ratio: 7 / 5;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__inner {
+        background-color: var(--col-white);
+        color: var(--col-green-deep);
+        padding: 1rem;
+        display: grid;
+        grid-template-rows: 1fr auto auto;
+    }
+    &__content {
+        font-size: var(--fs-300);
+        margin-bottom: 0.5rem;
+    }
+}
+
+.four_cards {
+    &__image {
+        aspect-ratio: 1;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__inner {
+        background-color: var(--col-green-soft);
+        color: var(--col-white);
+        padding: 1rem;
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+}

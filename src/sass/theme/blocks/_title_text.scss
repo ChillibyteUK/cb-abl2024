@@ -1,0 +1,13 @@
+.title_text {
+    position: relative;
+    isolation: isolate;
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background-image: url(../img/ren-ran-bBiuSdck8tU-unsplash--overlay.jpg);
+        background-size: cover;
+        mix-blend-mode: overlay;
+        opacity: 0.2;
+        z-index: -1;
+    }
+}

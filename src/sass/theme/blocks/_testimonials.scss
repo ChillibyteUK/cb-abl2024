@@ -1,0 +1,36 @@
+.testimonials {
+    &__inner {
+        position: relative;
+        padding-left: 3rem;
+        padding-top: 3rem;
+        &::before {
+            content: "";
+            background-image: url(../img/quote.svg);
+            width: 37px;
+            height: 30px;
+            background-size: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    .testimonial {
+        &__content {
+            font-family: var(--ff-heading);
+            font-style: italic;
+        }
+        &__attr {
+            font-size: var(--fs-300);
+        }
+    }
+
+    .slick-dots {
+        text-align: start;
+        bottom: -2rem;
+        li button::before{
+            font-size: var(--fs-300);
+        }
+    }
+}
+

@@ -1,13 +1,13 @@
 {
-    "key": "group_6463625c44115",
-    "title": "Site-Wide Settings",
+    "key": "group_65fd765dda869",
+    "title": "CB Three Cards",
     "fields": [
         {
-            "key": "field_6463625d4f7c7",
-            "label": "Contact",
+            "key": "field_65fd765ddfffd",
+            "label": "CB Three Cards",
             "name": "",
             "aria-label": "",
-            "type": "tab",
+            "type": "message",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -16,20 +16,43 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
-            "endpoint": 0
+            "message": "",
+            "new_lines": "wpautop",
+            "esc_html": 0
         },
         {
-            "key": "field_6463628e4f7c9",
-            "label": "Contact Phone",
-            "name": "contact_phone",
+            "key": "field_65fd766dad1b8",
+            "label": "Colour",
+            "name": "colour",
+            "aria-label": "",
+            "type": "editor_palette",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allowed_colors": "",
+            "exclude_colors": [
+                "black",
+                "white"
+            ],
+            "return_format": "slug"
+        },
+        {
+            "key": "field_65fd765de3c82",
+            "label": "Section Title",
+            "name": "section_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -40,51 +63,11 @@
             "append": ""
         },
         {
-            "key": "field_646362954f7ca",
-            "label": "Contact Email",
-            "name": "contact_email",
+            "key": "field_65fd765de78d6",
+            "label": "Cards",
+            "name": "cards",
             "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_646cbd26afcab",
-            "label": "Google Analytics",
-            "name": "ga_property",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_65fd926c54278",
-            "label": "Socials",
-            "name": "socials",
-            "aria-label": "",
-            "type": "group",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -94,18 +77,24 @@
                 "id": ""
             },
             "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_646362a64f7cb",
-                    "label": "LinkedIn URL",
-                    "name": "linkedin_url",
+                    "key": "field_65fd765deb551",
+                    "label": "Title",
+                    "name": "title",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -113,34 +102,41 @@
                     "maxlength": "",
                     "placeholder": "",
                     "prepend": "",
-                    "append": ""
+                    "append": "",
+                    "parent_repeater": "field_65fd765de78d6"
                 },
                 {
-                    "key": "field_65fd927e54279",
-                    "label": "Facebook URL",
-                    "name": "facebook_url",
+                    "key": "field_65fd765df2ea9",
+                    "label": "Image",
+                    "name": "image",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "image",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "thumbnail",
+                    "parent_repeater": "field_65fd765de78d6"
                 },
                 {
-                    "key": "field_65fd928c5427a",
-                    "label": "Twitter URL",
-                    "name": "twitter_url",
+                    "key": "field_65fd7a738afbe",
+                    "label": "Content",
+                    "name": "content",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -151,16 +147,17 @@
                     },
                     "default_value": "",
                     "maxlength": "",
+                    "rows": 2,
                     "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "new_lines": "br",
+                    "parent_repeater": "field_65fd765de78d6"
                 },
                 {
-                    "key": "field_65fd92975427b",
-                    "label": "Instagram URL",
-                    "name": "instagram_url",
+                    "key": "field_65fd765def1ea",
+                    "label": "Link",
+                    "name": "link",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -169,11 +166,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "return_format": "array",
+                    "parent_repeater": "field_65fd765de78d6"
                 }
             ]
         }
@@ -181,9 +175,9 @@
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "block",
                 "operator": "==",
-                "value": "theme-general-settings"
+                "value": "acf\/cb-three-cards"
             }
         ]
     ],
@@ -196,5 +190,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711116962
+    "modified": 1711110809
 }

@@ -2,8 +2,8 @@
 // Exit if accessed directly.
 defined('ABSPATH') || exit;
 
-require_once CB_THEME_DIR . '/inc/cb-posttypes.php';
-require_once CB_THEME_DIR . '/inc/cb-taxonomies.php';
+// require_once CB_THEME_DIR . '/inc/cb-posttypes.php';
+// require_once CB_THEME_DIR . '/inc/cb-taxonomies.php';
 require_once CB_THEME_DIR . '/inc/cb-utility.php';
 require_once CB_THEME_DIR . '/inc/cb-blocks.php';
 require_once CB_THEME_DIR . '/inc/cb-news.php';
@@ -54,15 +54,15 @@ if (function_exists('acf_add_options_page')) {
 
 function widgets_init()
 {
-    register_sidebar(
-        array(
-            'name'          => __('Footer Col 1', 'cb-abl2024'),
-            'id'            => 'footer-1',
-            'description'   => __('Footer Col 1', 'cb-abl2024'),
-            'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
-            'after_widget'  => '</div>',
-        )
-    );
+    // register_sidebar(
+    //     array(
+    //         'name'          => __('Footer Col 1', 'cb-abl2024'),
+    //         'id'            => 'footer-1',
+    //         'description'   => __('Footer Col 1', 'cb-abl2024'),
+    //         'before_widget' => '<div id="%1$s" class="footer-widget %2$s">',
+    //         'after_widget'  => '</div>',
+    //     )
+    // );
 
     register_nav_menus(array(
         'primary_nav' => __('Primary Nav', 'cb-abl2024'),
@@ -84,18 +84,61 @@ function widgets_init()
         'editor-color-palette',
         array(
             array(
-                'name'  => 'Dark Blue',
-                'slug'  => 'dark',
-                'color' => '#00487C',
+                'name'  => 'Black',
+                'slug'  => 'black',
+                'color' => '#0f0f0f',
             ),
+            array(
+                'name'  => 'White',
+                'slug'  => 'white',
+                'color' => '#fcfcfc',
+            ),
+            array(
+                'name'  => 'Soft Green',
+                'slug'  => 'green-soft',
+                'color' => '#91a88c',
+            ),
+            array(
+                'name'  => 'Deep Green',
+                'slug'  => 'green-deep',
+                'color' => '#364b53',
+            ),
+            array(
+                'name'  => 'Crisp Green',
+                'slug'  => 'green-crisp',
+                'color' => '#98d1d1',
+            ),
+            array(
+                'name'  => 'Light Crisp Green',
+                'slug'  => 'green-crisp-200',
+                'color' => '#e9ecec',
+            )
         )
     );
 }
 add_action('widgets_init', 'widgets_init', 11);
 
 
+// add logo to desktop nav
+function abl_logo_in_menu($items, $args)
+{
+    if($args->theme_location == 'primary_nav') {
+        $logo_url = get_stylesheet_directory_uri() . '/img/abl-logo.svg';
+        $home_url = home_url();
+        $logo = '<li class="menu-item-logo"><a href="' . $home_url . '"><img src="' . $logo_url . '" alt="Logo"></a></li>';
+        $items_array = explode('</li>', $items);
+        $middle = floor(count($items_array) / 2);
+        array_splice($items_array, $middle, 0, $logo);
+        $items = implode('</li>', $items_array);
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_items', 'abl_logo_in_menu', 10, 2);
+
 remove_action('wp_enqueue_scripts', 'wp_enqueue_global_styles');
 remove_action('wp_body_open', 'wp_global_styles_render_svg_filters');
+
+
 
 //Custom Dashboard Widget
 add_action('wp_dashboard_setup', 'register_cb_dashboard_widget');
@@ -127,36 +170,22 @@ function cb_dashboard_widget_display()
 }
 
 
-add_filter('wpseo_breadcrumb_links', function( $links ) {
-    global $post;
-    // if ( is_singular( 'post' ) ) {
-    //     $t = get_the_category($post->ID);
-    //     $breadcrumb[] = array(
-    //         'url' => '/guides/',
-    //         'text' => 'Guides',
-    //     );
+add_filter(
+    'wpseo_breadcrumb_links',
+    function ($links) {
+        global $post;
+        // if ( is_singular( 'post' ) ) {
+        //     $t = get_the_category($post->ID);
+        //     $breadcrumb[] = array(
+        //         'url' => '/guides/',
+        //         'text' => 'Guides',
+        //     );
 
-    //     array_splice( $links, 1, -2, $breadcrumb );
-    // }
-    return $links;
-}
+        //     array_splice( $links, 1, -2, $breadcrumb );
+        // }
+        return $links;
+    }
 );
-
-// remove discussion metabox
-function cc_gutenberg_register_files()
-{
-    // script file
-    wp_register_script(
-        'cc-block-script',
-        get_stylesheet_directory_uri() .'/js/block-script.js',
-        array( 'wp-blocks', 'wp-edit-post' )
-    );
-    // register block editor script
-    register_block_type('cc/ma-block-files', array(
-        'editor_script' => 'cc-block-script'
-    ));
-}
-// add_action('init', 'cc_gutenberg_register_files');
 
 function understrap_all_excerpts_get_more_link($post_excerpt)
 {
@@ -206,15 +235,16 @@ function cb_theme_enqueue()
 
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js', array(), null, true);
-
-    wp_enqueue_style('slick-styles', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css', array(), true);
-    wp_enqueue_style('slick-theme-styles', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css', array(), null, true);
-    wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array(), null, true);
-
-    // wp_enqueue_style('aos-style', "https://unpkg.com/aos@2.3.1/dist/aos.css", array());
-    // wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true);
+    wp_enqueue_style('slick-styles', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css', array(), true);
+    wp_enqueue_style('slick-theme-styles', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css', array(), true);
+    wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js', array(), null, true);
+    wp_enqueue_style('aos-style', "https://unpkg.com/aos@2.3.1/dist/aos.css", array());
+    wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
+
+
+
 
 
 // black thumbnails - fix alpha channel

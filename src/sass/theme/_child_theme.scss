@@ -7,8 +7,16 @@
 @import "forms";
 @import "blocks/blocks";
 
+body {
+    background-color: var(--col-white);
+    color: var(--col-black);
+}
+
 main {
-    margin-top: var(--h-top);
+    margin-top: var(--h-top-mobile);
+    @media (min-width:992px) {
+        margin-top: var(--h-top);
+    }
 }
 
 .container-xl .container-xl {
@@ -16,7 +24,7 @@ main {
 }
 
 a {
-    transition: color 300ms ease;
+    transition: color var(--transition);
 }
 
 a.noline {
@@ -44,14 +52,6 @@ a.anchor {
     }
 }
 
-:not(.share-icons,.social-icons,figure,.cb,.rplg-biz-name,#top-nav>li) > a[target="_blank"]:not(.btn,.fa-brands)::after {
-    content: "\f08e";
-    font-family: "Font Awesome 6 Free";
-    font-weight: 600;
-    margin-left: 0.5rem;
-    display: inline-block;
-}
-
 
 #breadcrumbs {
     font-size: 0.889rem;
@@ -63,37 +63,35 @@ a.anchor {
     font-style: italic;
 }
 
-:not(.share-icons,.social-icons,figure,.cb,.rplg-biz-name) > a[target="_blank"]:not(.btn)::after {
-    font-weight: 600;
-}
 
 ul.no-indent {
     padding-inline-start: 0;
 }
 
-#main {
-    a:not(.btn, .services__card, .sectors__card, .news_grid__item, .related__card, .gallery__preview, .cs_index__card ) {
-        color: var(--col-green-400);
-        font-weight: var(--fw-600);
-        text-decoration: none;
-        position: relative;
-        display: inline-block;
-        // &::before {
-        //     content: '';
-        //     position: absolute;
-        //     width: 100%;
-        //     transform: scale(0);
-        //     height: 2px;
-        //     bottom: 0;
-        //     left: 0;
-        //     background-color: var(--col-green-400);
-        //     transform-origin: bottom right;
-        //     transition: transform 250ms ease-out;
-        // }
-        // &:hover::before {
-        //     transform: scalex(1);
-        //     transform-origin: bottom left;
-        // }
+
+a {
+    text-decoration: none;
+}
+
+.social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    a {
+        background-color: var(--col-green-soft);
+        color: var(--col-white);
+        width: 40px;
+        height: 40px;
+        border: 1px solid transparent;
+        border-radius: 100vw;
+        display: grid;
+        place-content: center;
+        transition: border-color var(--transition), color var(--transition), background-color var(--transition);
+        &:hover {
+            border-color: var(--col-green-soft);
+            color: var(--col-green-soft);
+            background-color: var(--col-white);
+        }
     }
 }
 

@@ -1,0 +1,35 @@
+.hero_slideshow {
+    .carousel {
+        height: calc(100vh - var(--h-top));
+        overflow: hidden;
+    }
+    .carousel-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: hsla(var(--hsl-black) / 25%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    .carousel-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        h1 {
+            color: var(--col-white);
+            text-align: center;
+        }
+    }
+
+    .carousel-inner {
+        height: 100%;
+    }
+    .carousel-item {
+        height: 100%;
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
