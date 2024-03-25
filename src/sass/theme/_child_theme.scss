@@ -5,6 +5,7 @@
 @import "footer";
 @import "news";
 @import "forms";
+@import "portfolio";
 @import "blocks/blocks";
 
 body {
@@ -25,6 +26,13 @@ main {
 
 a {
     transition: color var(--transition);
+}
+
+main a:not([class]) {
+    color: var(--col-green-deep);
+    &:hover {
+        color: var(--col-green-crisp);
+    }
 }
 
 a.noline {
@@ -53,8 +61,13 @@ a.anchor {
 }
 
 
-#breadcrumbs {
-    font-size: 0.889rem;
+.breadcrumbs {
+    font-size: var(--fs-300);
+    color: var(--col-grey-400);
+    margin-bottom: 0.5rem;
+    a {
+        color: var(--col-green-crisp);
+    }
 }
 
 

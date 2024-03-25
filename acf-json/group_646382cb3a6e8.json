@@ -30,45 +30,47 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "33",
                 "class": "",
                 "id": ""
             },
             "choices": {
-                "text": "text \/ image",
-                "image": "image \/ text"
+                "Text\/Image": "Text\/Image",
+                "Image\/Text": "Image\/Text"
             },
-            "default_value": "",
+            "default_value": "Text\/Image",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
-            "layout": "vertical",
+            "layout": "horizontal",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_6601455bcde85",
+            "label": "Colour",
+            "name": "colour",
+            "aria-label": "",
+            "type": "editor_palette",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "66",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allowed_colors": "",
+            "exclude_colors": [
+                "black",
+                "white"
+            ],
+            "return_format": "slug"
         },
         {
             "key": "field_6463830511feb",
             "label": "Title",
             "name": "title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6463830c11fec",
-            "label": "Subtitle",
-            "name": "subtitle",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -144,7 +146,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
-            "preview_size": "medium"
+            "preview_size": "thumbnail"
         }
     ],
     "location": [
@@ -165,5 +167,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1684248358
+    "modified": 1711359367
 }

@@ -1,6 +1,10 @@
-#wrapper-navbar {
-    background-color: var(--col-white);
-    a {
+header {
+    #wrapper-navbar {
+        background-color: var(--col-white);
+        box-shadow: 0 2px 20px hsl(var(--hsl-green-deep) / 0.25);
+    }
+
+    a.nav-link {
         color: var(--col-green-deep);
         font-size: var(--fs-300);
         font-weight: var(--fw-700);
@@ -30,7 +34,7 @@
             }
         }
         
-        .scrolled {
+        &.hidden {
             .menu-item-logo {
                 img {
                     max-width: 250px;
@@ -48,7 +52,7 @@
             }
         }
         
-        .scrolled {
+        &.hidden {
             .menu-item-logo {
                 img {
                     max-width: 300px;
@@ -57,5 +61,5 @@
         }
     }
 
-    box-shadow: 0 2px 20px hsl(var(--hsl-green-deep) / 0.25);
+    
 }

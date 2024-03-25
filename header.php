@@ -19,7 +19,16 @@ defined('ABSPATH') || exit;
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="preload"
-        href="<?=get_stylesheet_directory_uri()?>/fonts/poppins-v20-latin-300.woff2"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/lora-v35-latin-italic.woff2"
+        as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/lora-v35-latin-regular.woff2"
+        as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/manrope-v15-latin-regular.woff2"
+        as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload"
+        href="<?=get_stylesheet_directory_uri()?>/fonts/manrope-v15-latin-700.woff2"
         as="font" type="font/woff2" crossorigin="anonymous">
     <?php
     if (is_front_page()) {
@@ -88,7 +97,7 @@ if (get_field('bing_site_verification', 'options')) {
     <?php
 do_action('wp_body_open');
 ?>
-    <header>
+    <header class="navholder" id="navholder">
         <div id="wrapper-navbar" class="fixed-top">
             <nav id="navbar" class="navbar navbar-expand-lg" aria-labelledby="main-nav-label">
                 <div class="container-xl">

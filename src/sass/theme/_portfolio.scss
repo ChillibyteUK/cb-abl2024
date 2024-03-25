@@ -1,0 +1,16 @@
+.portfolio {
+    &__grid {
+        display: grid;
+        gap: 0.25rem;
+        @media (min-width:992px) {
+            grid-template-columns: repeat(3,1fr);
+        }
+
+        a img {
+            aspect-ratio: 1;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

@@ -65,24 +65,51 @@ function acf_blocks()
             'mode'	=> 'edit',
             'supports' => array('mode' => false),
         ));
-        // acf_register_block_type(array(
-        //     'name'				=> 'cb_text_image',
-        //     'title'				=> __('CB Text Image'),
-        //     'category'			=> 'layout',
-        //     'icon'				=> 'cover-image',
-        //     'render_template'	=> 'page-templates/blocks/cb_text_image.php',
-        //     'mode'	=> 'edit',
-        //     'supports' => array('mode' => false),
-        // ));
-        // acf_register_block_type(array(
-        //     'name'				=> 'cb_contact',
-        //     'title'				=> __('CB Contact'),
-        //     'category'			=> 'layout',
-        //     'icon'				=> 'cover-image',
-        //     'render_template'	=> 'page-templates/blocks/cb_contact.php',
-        //     'mode'	=> 'edit',
-        //     'supports' => array('mode' => false),
-        // ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_text_image',
+            'title'				=> __('CB Text Image'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_text_image.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_portfolio',
+            'title'				=> __('CB Portfolio'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_portfolio.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_portfolio_index',
+            'title'				=> __('CB Portfolio Index'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_portfolio_index.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_contact',
+            'title'				=> __('CB Contact'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_contact.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
+        acf_register_block_type(array(
+            'name'				=> 'cb_latest_news',
+            'title'				=> __('CB Latest News'),
+            'category'			=> 'layout',
+            'icon'				=> 'cover-image',
+            'render_template'	=> 'page-templates/blocks/cb_latest_news.php',
+            'mode'	=> 'edit',
+            'supports' => array('mode' => false),
+        ));
     }
 }
 add_action('acf/init', 'acf_blocks');
