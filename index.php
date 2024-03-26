@@ -39,7 +39,7 @@ get_header();
                     <h3 class="related__title mb-0">
                         <?=get_the_title()?>
                     </h3>
-                    <div class="related__date mb-2"><?=$the_date?>
+                    <div class="related__date mt-2"><?=$the_date?>
                     </div>
                 </div>
             </a>
