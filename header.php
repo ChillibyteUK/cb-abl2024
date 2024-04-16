@@ -112,7 +112,7 @@ wp_nav_menu(
                                 'theme_location'  => 'primary_nav',
                                 'container_class' => 'collapse navbar-collapse navbars',
                                 'container_id'    => 'primaryNav',
-                                'menu_class'      => 'navbar-nav w-100 justify-content-between align-items-center',
+                                'menu_class'      => 'navbar-nav w-100 justify-content-center align-items-center',
                                 'fallback_cb'     => '',
                                 'menu_id'         => 'main-menu',
                                 'depth'           => 2,
