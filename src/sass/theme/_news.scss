@@ -97,6 +97,10 @@
 
 
 .blog {
+    &__title {
+        font-size: var(--fs-800);
+        color: var(--col-green-deep);
+    }
     &__image {
         aspect-ratio: 16 / 9;
         width: 100%;

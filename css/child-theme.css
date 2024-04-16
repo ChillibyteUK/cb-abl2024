@@ -21466,6 +21466,10 @@ footer .cb:hover {
   font-size: var(--fs-300);
 }
 
+.blog__title {
+  font-size: var(--fs-800);
+  color: var(--col-green-deep);
+}
 .blog__image {
   aspect-ratio: 16/9;
   width: 100%;
