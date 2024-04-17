@@ -25,7 +25,7 @@
   --fs-400: 1rem; /* 18px / 18px, the base */
   --fs-700: 1.222rem; /* 22px / 18px */
   --fs-800: clamp(2rem, 1.9304rem + 0.3478vw, 2.2rem);
-  --fs-900: clamp(1.8rem, 1.6609rem + 0.6957vw, 2.2rem);
+  --fs-900: clamp(2rem, 1.9304rem + 0.3478vw, 2.2rem);
   --lh-normal:
   --lh-200: 1.714;
   --lh-300: 1.5;
