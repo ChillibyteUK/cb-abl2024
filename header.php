@@ -103,7 +103,7 @@ do_action('wp_body_open');
                 <div class="container-xl">
                     <img src="<?=get_stylesheet_directory_uri()?>/img/abl-logo.svg"
                         alt="Angela Barker-Lewis Planting Design & Horticulture" class="d-lg-none mobile-logo">
-                    <button class="navbar-toggler input-button" id="navToggle" data-bs-toggle="collapse"
+                    <button class="d-none navbar-toggler input-button" id="navToggle" data-bs-toggle="collapse"
                         data-bs-target=".navbars" type="button" aria-label="Navigation"><i
                             class="fa fa-navicon"></i></button>
                     <?php
