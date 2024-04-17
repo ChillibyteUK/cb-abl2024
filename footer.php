@@ -9,7 +9,7 @@ defined('ABSPATH') || exit;
         <div class="row">
             <div class="col-lg-6">
                 <img src="<?=get_stylesheet_directory_uri()?>/img/abl-logo.svg"
-                    class="footer__logo mx-auto mx-lg-start" alt="Angela Barker-Lewis Planting Design & Horticulture">
+                    class="footer__logo mx-auto ms-lg-0" alt="Angela Barker-Lewis Planting Design & Horticulture">
                 <?php /* <p><?=do_shortcode('[social_icons]')?></p> */ ?>
             </div>
             <div class="col-lg-2 pt-2">
@@ -35,7 +35,7 @@ defined('ABSPATH') || exit;
     </div>
     <div class="colophon">
         <div class="container-xl py-2">
-            <div class="d-flex flex-wrap justify-content-center">
+            <div class="d-flex flex-wrap justify-content-center justify-content-md-between">
                 <div class="col-md-6 text-center text-md-start">
                     &copy; <?=date('Y')?> Angela
                     Barker-Lewis
