@@ -9,7 +9,7 @@ defined('ABSPATH') || exit;
         <div class="row">
             <div class="col-lg-6">
                 <img src="<?=get_stylesheet_directory_uri()?>/img/abl-logo.svg"
-                    class="footer__logo" alt="Angela Barker-Lewis Planting Design & Horticulture">
+                    class="footer__logo mx-auto mx-lg-start" alt="Angela Barker-Lewis Planting Design & Horticulture">
                 <?php /* <p><?=do_shortcode('[social_icons]')?></p> */ ?>
             </div>
             <div class="col-lg-2 pt-2">
