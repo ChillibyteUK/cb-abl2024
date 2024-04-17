@@ -35,15 +35,15 @@ defined('ABSPATH') || exit;
     </div>
     <div class="colophon">
         <div class="container-xl py-2">
-            <div class="d-flex flex-wrap justify-content-between">
+            <div class="d-flex flex-wrap justify-content-center">
                 <div class="col-md-6 text-center text-md-start">
                     &copy; <?=date('Y')?> Angela
                     Barker-Lewis
                 </div>
-                <div class="col-md-6 d-flex align-items-center justify-content-end flex-wrap gap-1">
+                <!-- div class="col-md-6 d-flex align-items-center justify-content-end flex-wrap gap-1">
                     <div><a href="/privacy-policy/">Privacy</a> &amp; <a href="/cookies-policy/">Cookies</a></div> |
                     <a href="/terms/">Terms &amp; conditions</a>
-                </div>
+                </div -->
             </div>
         </div>
     </div>
