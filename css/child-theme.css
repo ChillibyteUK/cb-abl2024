@@ -21230,6 +21230,10 @@ strong {
   color: var(--col-green-deep);
 }
 
+.bg-white {
+  background-color: var(--col-white);
+}
+
 .btn, .gform_button, .instagram-gallery__button {
   text-decoration: none;
   border-radius: 0rem;
