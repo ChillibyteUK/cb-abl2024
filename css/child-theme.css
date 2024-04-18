@@ -21255,7 +21255,7 @@ strong {
 
 .btn-green-deep, .instagram-gallery__button {
   background-color: hsl(var(--hsl-green-deep)/0.75);
-  border-color: var(--col-green-deep);
+  border-color: hsl(var(--hsl-green-deep)/0.75);
   color: var(--col-white);
 }
 .btn-green-deep:hover, .instagram-gallery__button:hover {
