@@ -21231,7 +21231,7 @@ strong {
 }
 
 .bg-white {
-  background-color: var(--col-white);
+  background-color: var(--col-white) !important;
 }
 
 .btn, .gform_button, .instagram-gallery__button {
