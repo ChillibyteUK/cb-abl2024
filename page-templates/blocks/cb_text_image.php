@@ -37,7 +37,7 @@ $img = wp_get_attachment_image_url(get_field('image'), 'large') ?: get_styleshee
         <?php
         if (get_field('title') ?? null) {
             ?>
-        <div class="h2 text-center d-md-none">
+        <div class="h2 text-center d-md-none <?=$title?>">
             <?=get_field('title')?>
         </div>
         <?php

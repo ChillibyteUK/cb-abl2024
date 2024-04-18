@@ -5,22 +5,27 @@ switch ($colour) {
     case 'green-deep':
         $content = 'text-white';
         $btn = 'btn-white--tx';
+        $title = '';
         break;
     case 'green-soft':
         $content = 'text-white';
         $btn = 'btn-white--tx';
+        $title = '';
         break;
     case 'green-crisp-200':
         $content = 'text-green-deep';
         $btn = 'btn-white';
+        $title = '';
         break;
     case 'white':
         $content = 'text-green-deep';
         $btn = 'btn-green-deep';
+        $title = 'text-green-deep';
         break;
     default:
         $content = 'text-green-deep';
         $btn = 'btn-white--tx';
+        $title = '';
         break;
 }
 
@@ -35,7 +40,7 @@ $overlay = (is_array($overlayField) && !empty($overlayField) && $overlayField[0]
     <div class="container-xl py-4">
         <div class="row g-4">
             <div class="col-md-4">
-                <h2><?=get_field('title')?></h2>
+                <h2 class="<?=$title?>"><?=get_field('title')?></h2>
             </div>
             <div class="col-md-8">
                 <div class="<?=$content?>">
