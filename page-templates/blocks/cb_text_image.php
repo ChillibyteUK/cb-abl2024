@@ -20,10 +20,12 @@ switch ($colour) {
     case 'white':
         $content = 'text-green-deep';
         $btn = 'btn-green-deep';
+        $title = 'text-green-deep';
         break;
     default:
         $content = 'text-green-deep';
         $btn = 'btn-white--tx';
+        $title = '';
         break;
 }
 
@@ -47,7 +49,7 @@ $img = wp_get_attachment_image_url(get_field('image'), 'large') ?: get_styleshee
                 <?php
         if (get_field('title') ?? null) {
             ?>
-                <h2 class="d-none d-md-block h2">
+                <h2 class="d-none d-md-block h2 <?=$title?>">
                     <?=get_field('title')?>
                 </h2>
                 <?php
