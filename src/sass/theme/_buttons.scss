@@ -23,6 +23,7 @@
 
 .btn-green-deep {
     background-color: hsl(var(--hsl-green-deep) / 0.75);
+    border: none;
     border-color: hsl(var(--hsl-green-deep) / 0.75);
     color: var(--col-white);
     &:hover {
