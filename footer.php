@@ -20,6 +20,8 @@ defined('ABSPATH') || exit;
             </div>
             <div class="col-lg-2 pt-2">
                 <?=wp_nav_menu(array('theme_location' => 'footer_menu3'))?>
+                <div class="footer__heading">Awards</div>
+                <img src="<?=get_stylesheet_directory_uri()?>/img/sgd-awards-finalist-2024.jpg">
                 <?php /*
                 <div class="footer__heading">Contact</div>
                 <div class="menu-item"><i class="fa-solid fa-phone"></i>
