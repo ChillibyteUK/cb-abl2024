@@ -21238,7 +21238,6 @@ strong {
   display: inline-block;
   padding: 0.5rem 1.2rem;
   text-transform: uppercase;
-  font-weight: var(--fw-700);
   letter-spacing: var(--ls-900);
   transition: color var(--transition), background-color var(--transition);
 }
