@@ -21263,6 +21263,28 @@ strong {
   color: var(--col-white);
 }
 
+.btn-green-soft {
+  background-color: hsl(var(--hsl-green-soft)/0.75);
+  border: none;
+  border-color: hsl(var(--hsl-green-soft)/0.75);
+  color: var(--col-white);
+}
+.btn-green-soft:hover {
+  background-color: hsl(var(--hsl-green-soft)/1);
+  color: var(--col-white);
+}
+
+.btn-green-crisp {
+  background-color: hsl(var(--hsl-green-crisp)/0.75);
+  border: none;
+  border-color: hsl(var(--hsl-green-crisp)/0.75);
+  color: var(--col-white);
+}
+.btn-green-crisp:hover {
+  background-color: hsl(var(--hsl-green-crisp)/1);
+  color: var(--col-white);
+}
+
 .btn-white--tx {
   background-color: hsl(var(--hsl-white)/0.25);
   border-color: var(--col-white);
