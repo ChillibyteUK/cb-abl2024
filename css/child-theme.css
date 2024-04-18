@@ -21202,6 +21202,10 @@ strong {
   font-size: var(--fs-400);
 }
 
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
 .bg-green-crisp {
   background-color: var(--col-green-crisp);
   color: var(--col-white);
