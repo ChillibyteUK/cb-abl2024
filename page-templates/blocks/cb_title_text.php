@@ -1,4 +1,5 @@
 <?php
+$class = $block['className'] ?? 'py-5';
 $colour = get_field('colour') ?: 'white';
 
 switch ($colour) {
@@ -35,12 +36,14 @@ $overlay = (is_array($overlayField) && !empty($overlayField) && $overlayField[0]
 // $btn = $colour == 'green-crisp-200' ? 'btn-white' : 'btn-white--tx';
 // $content = $colour == 'green-deep' ? 'text-white' : 'text-green-deep';
 ?>
-<section class="title_text py-5 bg-<?=$colour?>">
+<section
+    class="title_text <?=$class?> bg-<?=$colour?>">
     <?=$overlay?>
     <div class="container-xl py-4">
         <div class="row g-4">
             <div class="col-md-4">
-                <h2 class="<?=$title?>"><?=get_field('title')?></h2>
+                <h2 class="<?=$title?>">
+                    <?=get_field('title')?></h2>
             </div>
             <div class="col-md-8">
                 <div class="<?=$content?>">
