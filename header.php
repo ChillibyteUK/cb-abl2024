@@ -89,7 +89,6 @@ if (get_field('bing_site_verification', 'options')) {
 }
 ?>
     <?php wp_head(); ?>
-    <meta name="google-site-verification" content="4W-KMZmlmLkobQbWLvM7uoxlOnabbV5vxhKhhdoSv0g" />
 </head>
 
 <body <?php body_class(); ?>
