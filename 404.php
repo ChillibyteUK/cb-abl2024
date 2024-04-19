@@ -12,6 +12,7 @@ $bg = wp_get_attachment_image_url(get_field('hero_image', 'options'), 'full');
 $homepage_id = get_option('page_on_front');
 $blocks = parse_blocks(get_post_field('post_content', $homepage_id));
 foreach ($blocks as $block) {
+    echo $block['blockName'] . '<br>';
     if ($block['blockName'] === 'acf/cb_hero_slideshow') {
         $images = get_field('slides', $block['attrs']['id']);
         if ($images) {
@@ -46,3 +47,4 @@ foreach ($blocks as $block) {
 </main>
 <?php
 get_footer();
+?>
