@@ -6,7 +6,7 @@ $link = get_field('cta');
 
 ?>
 <section class="hero_slideshow">
-    <div id="heroSlideshow" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000"
+    <div id="heroSlideshow" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
         data-bs-pause="false">
         <div class="carousel-overlay"></div>
         <div class="carousel-title container-xl">
