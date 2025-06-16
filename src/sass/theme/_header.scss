@@ -1,7 +1,14 @@
 header {
     #wrapper-navbar {
         background-color: var(--col-white);
-        box-shadow: 0 2px 20px hsl(var(--hsl-green-deep) / 0.25);
+        // box-shadow: 0 2px 20px hsl(var(--hsl-green-deep) / 0.25);
+    }
+
+    .navbar-nav {
+        @media (min-width: 992px) {
+            border-bottom: 1px solid hsl( var(--hsl-green-soft) / 0.5 );
+            
+        }
     }
 
     a.nav-link {
@@ -44,10 +51,10 @@ header {
     }
     @media (min-width:1200px) {
         .menu-item-logo {
-            width: 400px;
+            width: 330px;
             img {
-                max-width: 400px;
-                width: 400px;
+                max-width: 330px;
+                width: 330px;
                 height: auto;
             }
         }

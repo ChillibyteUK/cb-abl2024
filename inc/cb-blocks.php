@@ -136,7 +136,7 @@ function modify_core_add_container($attributes, $content)
     ob_start();
     // $class = $block['className'];
     ?>
-<div class="container-xl">
+<div class="container">
     <?=$content?>
 </div>
 <?php

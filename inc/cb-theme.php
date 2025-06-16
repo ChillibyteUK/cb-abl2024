@@ -246,7 +246,32 @@ function cb_theme_enqueue()
 add_action('wp_enqueue_scripts', 'cb_theme_enqueue');
 
 
-
+add_theme_support( 'editor-font-sizes', array(
+	array(
+		'name'      => __( 'Small', 'yourtheme' ),
+		'shortName' => __( 'S', 'yourtheme' ),
+		'slug'      => 'small',
+		'size'      => 14, // px
+	),
+	array(
+		'name'      => __( 'Normal', 'yourtheme' ),
+		'shortName' => __( 'M', 'yourtheme' ),
+		'slug'      => 'normal',
+		'size'      => 18,
+	),
+	array(
+		'name'      => __( 'Large', 'yourtheme' ),
+		'shortName' => __( 'L', 'yourtheme' ),
+		'slug'      => 'large',
+		'size'      => 20,
+	),
+	array(
+		'name'      => __( 'XL', 'yourtheme' ),
+		'shortName' => __( 'XL', 'yourtheme' ),
+		'slug'      => 'x-large',
+		'size'      => 36,
+	),
+) );
 
 
 // black thumbnails - fix alpha channel

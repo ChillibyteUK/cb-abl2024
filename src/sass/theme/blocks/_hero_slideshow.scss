@@ -1,7 +1,10 @@
 .hero_slideshow {
+    isolation: isolate;
+    position: relative;
     .carousel {
-        height: calc(100vh - var(--h-top));
+        height: calc(70vh - var(--h-top));
         overflow: hidden;
+        z-index: -1;
     }
     .carousel-overlay {
         position: absolute;
@@ -32,4 +35,23 @@
             object-fit: cover;
         }
     }
+
+    &__title {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 3rem;
+        background-color: hsl( var(--hsl-black) / 0.8);
+        color: var(--col-white);
+        h1 {
+            text-align: center;
+            text-wrap: balanced;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-family: var(--ff-body);
+            letter-spacing: 0.3em;
+        }
+    }
+
 }
