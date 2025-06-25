@@ -7,7 +7,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-$block_id = $block['id'];
+$block_id = $block['anchor'];
 
 ?>
 <section class="four_cards py-5" id="<?= esc_attr( $block_id ); ?>">
