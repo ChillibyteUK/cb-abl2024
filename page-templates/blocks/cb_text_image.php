@@ -45,7 +45,7 @@ $img = wp_get_attachment_image_url(get_field('image'), 'large') ?: get_styleshee
 ?>
         <div class="row g-4">
             <div
-                class="col-md-6 <?=$txtcol?> d-flex flex-column justify-content-center">
+                class="col-md-6 <?=$txtcol?> d-flex flex-column justify-content-start">
                 <?php
         if (get_field('title') ?? null) {
             ?>
