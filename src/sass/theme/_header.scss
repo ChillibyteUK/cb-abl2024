@@ -4,17 +4,17 @@ header {
         // box-shadow: 0 2px 20px hsl(var(--hsl-green-deep) / 0.25);
     }
 
-    .navbar-nav {
+    .navbar {
         @media (min-width: 992px) {
             border-bottom: 1px solid hsl( var(--hsl-green-soft) / 0.5 );
-            
         }
     }
+
 
     a.nav-link {
         color: var(--col-green-deep);
         font-size: var(--fs-300);
-        font-weight: var(--fw-700);
+        font-weight: var(--fw-400);
         letter-spacing: var(--ls-900);
         text-transform: uppercase;
     }

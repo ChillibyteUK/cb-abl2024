@@ -112,7 +112,7 @@ defined( 'ABSPATH' ) || exit;
 	?>
 
     <header class="navholder" id="navholder">
-        <div id="wrapper-navbar" class="fixed-top">
+        <div id="wrapper-navbar" class="fixed-top pb-2">
             <nav id="navbar" class="navbar navbar-expand-lg" aria-labelledby="main-nav-label">
                 <div class="container-xl">
                     <img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/abl-logo.svg' ); ?>"

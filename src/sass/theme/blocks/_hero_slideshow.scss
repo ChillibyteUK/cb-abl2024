@@ -2,7 +2,7 @@
     isolation: isolate;
     position: relative;
     .carousel {
-        height: calc(70vh - var(--h-top));
+        height: calc(100vh - var(--h-top));
         overflow: hidden;
         z-index: -1;
     }
