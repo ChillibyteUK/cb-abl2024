@@ -7,8 +7,10 @@
 
 defined( 'ABSPATH' ) || exit;
 
+$block_id = $block['id'];
+
 ?>
-<section class="four_cards py-5">
+<section class="four_cards py-5" id="<?= esc_attr( $block_id ); ?>">
     <div class="container-xl py-4">
         <h2 class="text-center mb-4">
             <?= esc_html( get_field( 'section_title' ) ); ?>
