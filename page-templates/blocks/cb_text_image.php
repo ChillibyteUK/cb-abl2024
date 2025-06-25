@@ -69,7 +69,7 @@ if (get_field('link') ?? null) {
 ?>
             </div>
             <div
-                class="col-md-6 <?=$imgcol?> d-flex align-items-center">
+                class="col-md-6 <?=$imgcol?> d-flex align-items-start">
                 <img src="<?=$img?>"
                     alt="<?=get_field('title')?>"
                     class="feature__img mx-auto">
