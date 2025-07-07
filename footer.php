@@ -47,7 +47,7 @@ defined( 'ABSPATH' ) || exit;
                     Barker-Lewis
                 </div>
                 <div class="col-md-6 d-flex align-items-center justify-content-end flex-wrap gap-1">
-                    <div><a href="/privacy-policy/">Privacy</a> &amp; <a href="/cookies-policy/">Cookies</a></div> |
+                    <div><a href="/privacy-policy/">Privacy</a> &amp; <a href="/cookie-policy/">Cookies</a></div> |
                     <a href="/terms/">Terms &amp; conditions</a>
                 </div>
             </div>
