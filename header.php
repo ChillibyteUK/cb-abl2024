@@ -117,7 +117,7 @@ defined( 'ABSPATH' ) || exit;
                 <div class="container-xl">
                     <img src="<?= esc_url( get_stylesheet_directory_uri() . '/img/abl-logo.svg' ); ?>"
                         alt="Angela Barker-Lewis Planting Design & Horticulture" class="mx-auto d-lg-none mobile-logo">
-                    <button class="d-none navbar-toggler input-button" id="navToggle" data-bs-toggle="collapse"
+                    <button class="navbar-toggler input-button" id="navToggle" data-bs-toggle="collapse"
                         data-bs-target=".navbars" type="button" aria-label="Navigation"><i
                             class="fa fa-navicon"></i></button>
                     <?php
